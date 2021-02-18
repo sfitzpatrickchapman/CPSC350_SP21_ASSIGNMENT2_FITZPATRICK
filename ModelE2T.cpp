@@ -1,14 +1,14 @@
-#include "Model.h"
+#include "ModelE2T.h"
 
-Model::Model() {} //default constructor
-Model::~Model() {} //destructor
+ModelE2T::ModelE2T() {} //default constructor
+ModelE2T::~ModelE2T() {} //destructor
 
 
-string Model::translateSingleCharacter(char inputChar) {
+string ModelE2T::translateSingleCharacter(char engChar) {
   string returnString;
   /* Finds the corresponding translation for each consonant. Switch inputs are
   converted to lowercase for standardization */
-  switch(tolower(inputChar)) {
+  switch(tolower(engChar)) {
     case 'b':
       returnString = "bub";
       break;
@@ -73,22 +73,22 @@ string Model::translateSingleCharacter(char inputChar) {
       returnString = "zub";
       break;
     default: //return the original input if it isn't a consonant
-      return returnString + inputChar;
+      return returnString + engChar;
   }
 
   /* If uppercase, use capitalilization for first tutnese letter */
-  if (isupper(inputChar))
+  if (isupper(engChar))
     returnString[0] = toupper(returnString[0]);
 
   return returnString;
 }
 
 
-string Model::translateDoubleCharacter(char inputChar) {
+string ModelE2T::translateDoubleCharacter(char engChar) {
   string returnString;
   /* Finds the corresponding translation for a doubled letter represented by
   a single char. Switch inputs converted to lowercase for standardization */
-  switch(tolower(inputChar)) {
+  switch(tolower(engChar)) {
     case 'a':
       returnString = "squata";
       break;
@@ -168,11 +168,11 @@ string Model::translateDoubleCharacter(char inputChar) {
       returnString = "squaz";
       break;
     default: //return the non-letter doubled (since 2nd index will be skipped)
-      return returnString + inputChar + inputChar;
+      return returnString + engChar + engChar;
   }
 
   /* If uppercase, use capitalilization for first tutnese letter */
-  if (isupper(inputChar))
+  if (isupper(engChar))
     returnString[0] = toupper(returnString[0]);
 
   return returnString;

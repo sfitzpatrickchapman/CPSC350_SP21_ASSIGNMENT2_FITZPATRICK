@@ -8,8 +8,9 @@ class Translator {
 public:
   Translator(); //default constructor
   ~Translator(); //destructor
-  string translateEnglishWord(string inputWord);
-  string translateEnglishSentence(string inputSentence);
+  string translateEnglishWord(string engWord);
+  string translateEnglishSentence(string engSentence);
+  string translateTutneseSentence(string tutSentence);
 };
 
 #endif

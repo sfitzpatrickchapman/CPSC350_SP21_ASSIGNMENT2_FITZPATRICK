@@ -8,7 +8,7 @@ class FileProcessor {
 public:
   FileProcessor(); //default constructor
   ~FileProcessor(); //destructor
-  void processFile(string inputFile, string outputFile);
+  void processFile(string inputFile, string outputFile, string translationType);
 };
 
 #endif

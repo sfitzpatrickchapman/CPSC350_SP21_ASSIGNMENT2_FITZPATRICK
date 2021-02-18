@@ -1,13 +1,13 @@
-#ifndef MODEL_H
-#define MODEL_H
+#ifndef MODELE2T_H
+#define MODELE2T_H
 #include <iostream>
 #include <string>
 using namespace std;
 
-class Model {
+class ModelE2T {
 public:
-  Model(); //default constructor
-  ~Model(); //destructor
+  ModelE2T(); //default constructor
+  ~ModelE2T(); //destructor
   string translateSingleCharacter(char userChar);
   string translateDoubleCharacter(char userChars);
 };
