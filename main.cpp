@@ -1,5 +1,4 @@
 #include <iostream>
-#include "ModelT2E.h"
 #include "ModelE2T.h"
 #include "Translator.h"
 #include "FileProcessor.h"
@@ -19,9 +18,10 @@ int main(int argc, char **argv) {
   cout << "Please enter \"E2T\" for English->Tut or \"T2E\" for Tut->English: ";
   cin >> translationType;
 
-  while ((translationType != "E2T") || (translationType != "T2E")) {
-    cout << "Invalid translation type. Please enter \"E2T\" for English->Tut" <<
-    " or \"T2E\" for Tut->English: ";
+  /* If input is translation type input is invalid, re-prompt till valid */
+  while ((translationType != "E2T") && (translationType != "T2E")) {
+    cout << "Invalid translation type." << endl << "Please enter \"E2T\" for "<<
+    "English->Tut or \"T2E\" for Tut->English: ";
     cin >> translationType;
   }
 
