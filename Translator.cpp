@@ -142,119 +142,131 @@ string Translator::tokenFinder(string tutWord) {
 
 
 string Translator::tokenConverter(string token) {
+  bool firstUpper = false;
+  string engLetter;
+
+  if (isupper(token[0])) //remember uppercase (first letter)
+    firstUpper = true;
+
   token = tolowercase(token); //lowercase for standardization
 
-  /* Search for all tutnese language character sequences (and punctuation)*/
+  /* Search for all tutnese language character sequences (and punctuation) */
   if (token == "squata")
-    return "aa";
-  if (token == "squate")
-    return "ee";
-  if (token == "squati")
-    return "ii";
-  if (token == "squato")
-    return "oo";
-  if (token == "squatu")
-    return "uu";
-  if (token == "quack")
-    return "q";
-  if (token == "cash")
-    return "c";
-  if (token == "hash")
-    return "h";
-  if (token == "kuck")
-    return "k";
-  if (token == "wack")
-    return "w";
-  if (token == "bub")
-    return "b";
-  if (token == "dud")
-    return "d";
-  if (token == "fuf")
-    return "f";
-  if (token == "gug")
-    return "g";
-  if (token == "jay")
-    return "j";
-  if (token == "lul")
-    return "l";
-  if (token == "mum")
-    return "m";
-  if (token == "nun")
-    return "n";
-  if (token == "pub")
-    return "p";
-  if (token == "rug")
-    return "r";
-  if (token == "sus")
-    return "s";
-  if (token == "tut")
-    return "t";
-  if (token == "vuv")
-    return "v";
-  if (token == "yub")
-    return "y";
-  if (token == "zub")
-    return "z";
-  if (token == "ex")
-    return "x";
-  if (token == "a")
-    return "a";
-  if (token == "e")
-    return "e";
-  if (token == "i")
-    return "i";
-  if (token == "o")
-    return "o";
-  if (token == "u")
-    return "u";
-  if (token == ",")
-    return ",";
-  if (token == "<")
-    return "<";
-  if (token == ".")
-    return ".";
-  if (token == ">")
-    return ">";
-  if (token == "?")
-    return "?";
-  if (token == ":")
-    return ":";
-  if (token == ";")
-    return ";";
-  if (token == "{")
-    return "{";
-  if (token == "}")
-    return "}";
-  if (token == "`")
-    return "`";
-  if (token == "~")
-    return "~";
-  if (token == "!")
-    return "!";
-  if (token == "@")
-    return "@";
-  if (token == "#")
-    return "#";
-  if (token == "$")
-    return "$";
-  if (token == "%")
-    return "%";
-  if (token == "^")
-    return "^";
-  if (token == "&")
-    return "&";
-  if (token == "*")
-    return "*";
-  if (token == "(")
-    return "(";
-  if (token == ")")
-    return ")";
-  if (token == "_")
-    return "_";
-  if (token == "+")
-    return "+";
-  if (token == "=")
-    return "=";
+    engLetter = "aa";
+  else if (token == "squate")
+    engLetter = "ee";
+  else if (token == "squati")
+    engLetter = "ii";
+  else if (token == "squato")
+    engLetter = "oo";
+  else if (token == "squatu")
+    engLetter = "uu";
+  else if (token == "quack")
+    engLetter = "q";
+  else if (token == "cash")
+    engLetter = "c";
+  else if (token == "hash")
+    engLetter = "h";
+  else if (token == "kuck")
+    engLetter = "k";
+  else if (token == "wack")
+    engLetter = "w";
+  else if (token == "bub")
+    engLetter = "b";
+  else if (token == "dud")
+    engLetter = "d";
+  else if (token == "fuf")
+    engLetter = "f";
+  else if (token == "gug")
+    engLetter = "g";
+  else if (token == "jay")
+    engLetter = "j";
+  else if (token == "lul")
+    engLetter = "l";
+  else if (token == "mum")
+    engLetter = "m";
+  else if (token == "nun")
+    engLetter = "n";
+  else if (token == "pub")
+    engLetter = "p";
+  else if (token == "rug")
+    engLetter = "r";
+  else if (token == "sus")
+    engLetter = "s";
+  else if (token == "tut")
+    engLetter = "t";
+  else if (token == "vuv")
+    engLetter = "v";
+  else if (token == "yub")
+    engLetter = "y";
+  else if (token == "zub")
+    engLetter = "z";
+  else if (token == "ex")
+    engLetter = "x";
+  else if (token == "a")
+    engLetter = "a";
+  else if (token == "e")
+    engLetter = "e";
+  else if (token == "i")
+    engLetter = "i";
+  else if (token == "o")
+    engLetter = "o";
+  else if (token == "u")
+    engLetter = "u";
+  else if (token == ",")
+    engLetter = ",";
+  else if (token == "<")
+    engLetter = "<";
+  else if (token == ".")
+    engLetter = ".";
+  else if (token == ">")
+    engLetter = ">";
+  else if (token == "?")
+    engLetter = "?";
+  else if (token == ":")
+    engLetter = ":";
+  else if (token == ";")
+    engLetter = ";";
+  else if (token == "{")
+    engLetter = "{";
+  else if (token == "}")
+    engLetter = "}";
+  else if (token == "`")
+    engLetter = "`";
+  else if (token == "~")
+    engLetter = "~";
+  else if (token == "!")
+    engLetter = "!";
+  else if (token == "@")
+    engLetter = "@";
+  else if (token == "#")
+    engLetter = "#";
+  else if (token == "$")
+    engLetter = "$";
+  else if (token == "%")
+    engLetter = "%";
+  else if (token == "^")
+    engLetter = "^";
+  else if (token == "&")
+    engLetter = "&";
+  else if (token == "*")
+    engLetter = "*";
+  else if (token == "(")
+    engLetter = "(";
+  else if (token == ")")
+    engLetter = ")";
+  else if (token == "_")
+    engLetter = "_";
+  else if (token == "+")
+    engLetter = "+";
+  else if (token == "=")
+    engLetter = "=";
+  else //if no tut sequence found
+    return ""; //will return invalid tut error message and program exit
 
-  return ""; //will return error message and program exit
+  if (firstUpper && isalpha(engLetter[0])) {
+    engLetter[0] = toupper(engLetter[0]); //return first char to uppercase
+  }
+
+  return engLetter;
 }
