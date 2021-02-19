@@ -14,13 +14,10 @@ Source Files:
 -Translator.h  
 -ModelE2T.cpp  
 -ModelE2T.h  
--ModelT2E.cpp  
--ModelT2E.h  
   
  Errors, Limitations, Deviations:  
--Does not compile with new tut to english class  
--English to tut does not handle all caps for individual words  
--Does not handle caps for tut to english  
+-Handles most but not all T2E punctuation
+-Caps is limited
   
 References:  
 -Regex testing: https://regex101.com/  
