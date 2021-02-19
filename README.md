@@ -16,8 +16,8 @@ Source Files:
 -ModelE2T.h  
   
  Errors, Limitations, Deviations:  
--Handles most but not all T2E punctuation
--Caps is limited
+-Handles most but not all T2E punctuation  
+-All caps doesn't really work for T2E  
   
 References:  
 -Regex testing: https://regex101.com/  
